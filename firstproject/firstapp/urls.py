@@ -4,7 +4,7 @@ from firstapp import views
 
 
 urlpatterns = [
-    #path('appdemo/', views.call_app_url),
+    # path('appdemo/', views.call_app_url),
     
 
 ]

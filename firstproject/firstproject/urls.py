@@ -20,8 +20,16 @@ from firstapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home),
+    path('about', views.about),
+    path('services', views.services),
+    path('projects', views.projects),
+    path('courses', views.courses),
+    path('codes', views.codes),
+    path('contact', views.contact),
     path('welcome/', views.welcome),
     path('templates_demo',views.templates_demo),
+    path('insert_demo',views.insert_demo),
    # path('app',include('firstapp.urls')),
 
 ]
