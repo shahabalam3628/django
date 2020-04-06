@@ -1,0 +1,127 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{% static 'Bootstrap\css\bootstrap.min.css' %} " rel="stylesheet" type="text/css" media="all">
+  <script src="{% static 'Bootstrap\jquery\jquery.min.js' %}"></script>
+  <script src="{% static 'Bootstrap\js\bootstrap.min.js' %}"></script>
+</head>
+<body>
+
+<div class="container">
+  <center><h2>Our Worked List</h2></center>
+           
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Demo</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+      <tr>
+        <td>Example of CURD operation</td>
+        <td><a href="{% url 'index' %}">Click Me</a></td>
+      </tr>
+
+      <tr>
+        <td>Create Form</td>
+        <td><a href="{% url 'person' %}">Click Me</a></td>
+      </tr>
+      <tr>
+        <td>Image Uploading Demo</td>
+        <td><a href="{% url 'index' %}">Click Me</a></td>
+      </tr>
+
+      <tr>
+        <td><strong>Session Demo</strong></td>
+        <td><a href="{% url 'index' %}"></a></td>
+      </tr>
+      <tr>
+        <td>Session Set</td>
+        <td><a href="{% url 'setsession' %}">Click Me</a></td>
+      </tr>
+      <tr>
+        <td>Session Get</td>
+        <td><a href="{% url 'getsession' %}">Click Me</a></td>
+      </tr>
+      <tr>
+        <td>Session Expire</td>
+        <td><a href="{% url 'getsession' %}">Click Me</a></td>
+      </tr>
+
+      <tr>
+        <td><strong>Pagination Demo</strong> </td>
+        <td><a href="{% url 'index' %}"></a></td>
+      </tr>
+
+      <tr>
+        <td>Pagination using Next And Previous</td>
+        <td><a href="{% url 'page2' %}">Click Me</a></td>
+      </tr>
+      <tr>
+        <td>Validation using only page Numbers</td>
+        <td><a href="{% url 'index' %}">Click Me</a></td>
+      </tr>
+
+      <tr>
+        <td>Validation using pageNo And Next Previous</td>
+        <td><a href="{% url 'page3' %}">Click Me</a></td>
+      </tr>
+      <tr>
+        <td>Ajax Demo</td>
+        <td><a href="{% url 'index' %}">Click Me</a></td>
+      </tr>
+      <tr>
+        <td>Relationship Demo</td>
+        <td><a href="{% url 'index' %}">Click Me</a></td>
+      </tr>
+
+
+      <tr>
+        <td><strong>Send Email Demo </strong></td>
+        <td><a href="{% url 'index' %}"></a></td>
+      </tr>
+
+      <tr>
+        <td>Send Email Method 1</td>
+        <td><a href="{% url 'emaildemo' %}">Click Me</a></td>
+      </tr>
+
+
+      <tr>
+        <td>Send Dynamic Message Without using Model</td>
+        <td><a href="{% url 'contact1' %}">Click Me</a></td>
+      </tr>
+
+
+
+      <tr>
+        <td>Middleware Demo</td>
+        <td><a href="{% url 'index' %}">Click Me</a></td>
+      </tr>
+      <tr>
+        <td>Chache Demo</td>
+        <td><a href="{% url 'index' %}">Click Me</a></td>
+      </tr>
+      <tr>
+        <td>Login Systemd Demo </td>
+        <td><a href="{% url 'registration' %}">Click Me</a></td>
+      </tr>
+    
+      
+    
+
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

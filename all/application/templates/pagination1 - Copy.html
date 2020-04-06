@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Person</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{% static 'Bootstrap\css\bootstrap.min.css' %} " rel="stylesheet" type="text/css" media="all">
+  <script src="{% static 'Bootstrap\jquery\jquery.min.js' %}"></script>
+  <script src="{% static 'Bootstrap\js\bootstrap.min.js' %}"></script>
+</head>
+<body>
+
+    <div class="container"> 
+          
+      {% if is_paginated %}
+      <nav aria-label="Page navigation conatiner"></nav>
+      <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+    
+        {% endif %}
+      </ul>
+      </nav>
+    </div>
+    {% endif %}
+  
+
+
+</body>
+</html>

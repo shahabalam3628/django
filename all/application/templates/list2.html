@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Person</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{% static 'Bootstrap\css\bootstrap.min.css' %} " rel="stylesheet" type="text/css" media="all">
+  <script src="{% static 'Bootstrap\jquery\jquery.min.js' %}"></script>
+  <script src="{% static 'Bootstrap\js\bootstrap.min.js' %}"></script>
+</head>
+<body>
+
+  
+
+
+
+<div class = "container-full">
+  <div class = "col-md-12">
+  
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Content</th>
+          <th>Publish</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for obj in object_list %}
+        <tr>
+          <td>{{obj.id}}</td>
+          <td>{{obj.title}}</td>
+          <td>{{obj.content}}</td>
+          <td>{{obj.publish}}</td>
+        </tr>
+        {% endfor %}
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class = "container">
+  <div class = "col-md-6">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">  <!-- Jump to Prvious Page -->
+          {% if object_list.has_previous %}
+             <li class="previous"> <a href="?page={{ object_list.previous_page_number }}">
+             <span aria-hidden="true">‹</span></a>
+          {% else %}
+              <li class="previous disabled"><a>‹</a>
+          {% endif %}
+        </li>
+         {% for page in object_list.paginator.page_range %}
+            {% if page == object_list.number %}
+            <li class="pg active"><a class = "page_number" href="?page={{page}}">{{page}}</a>
+            {% else %}
+            <li class="pg"><a class = "page_number" href="?page={{page}}">{{page}}</a>
+            {% endif %}
+        {% endfor %}
+        <li class="page-item">  <!-- Jump to Next Page -->
+          {% if object_list.has_next %}
+            <li class="previous"> <a href="?page={{ object_list.next_page_number }}">›</a></li>
+          {% else %}
+              <li class="next disabled"><a>›</a>
+          {% endif %}
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+      
+      
+  
+    
+  
+
+
+</body>
+</html>
